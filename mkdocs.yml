@@ -1,0 +1,52 @@
+site_name: langraph-example
+repo_url: https://github.com/swordfly/langraph-example
+site_url: https://swordfly.github.io/langraph-example
+site_description: Langraph exmaple for learning
+site_author: Michael Wei
+edit_uri: edit/main/docs/
+repo_name: swordfly/langraph-example
+copyright: Maintained by <a href="https://swordfly.com">swordfly</a>.
+
+nav:
+  - Home: index.md
+  - Modules: modules.md
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          paths: ["src/langraph_example"]
+theme:
+  name: material
+  feature:
+    tabs: true
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: white
+      accent: deep orange
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: deep orange
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  icon:
+    repo: fontawesome/brands/github
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/swordfly/langraph-example
+    - icon: fontawesome/brands/python
+      link: https://pypi.org/project/langraph-example
+
+markdown_extensions:
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
